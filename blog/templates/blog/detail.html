@@ -6,19 +6,16 @@
 Published {{ post.publish }} by {{ post.author }}
 </p>
 {{ post.body|linebreaks }}
+
+<p>
+    <a href="{% url "blog:post_share" post.id %}">
+        Share this post
+    </a>
+</p>
+
 {% endblock%}
 
 
 
-{% comment %} {%extends 'blog/base.html'%}
 
-{% block title%}{{post.title}}{%endblock%}
-
-{% block content %}
-    <h1>{{post.title}}</h1>
-    <p class="date">
-        Published{{POST.publish}} by {{post.author}}
-    </p>
-    {{post.body|linebreaks}}
-{% endblock%} {% endcomment %}
 
